@@ -17,7 +17,7 @@ youtube_video_researcher = Agent(
 ### Create a senior blog writer
 blog_writer = Agent(
     role='Blog writer',
-    goal="Narrate compelling tech stories about the videos in topic {topic} from youtube channel",
+    goal="Narrate compelling tech stories about the videos on the topic {topic} from youtube channel",
     verbose=True,
     memory=True,
     backstory=(
