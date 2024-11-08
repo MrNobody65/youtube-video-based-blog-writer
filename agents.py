@@ -1,4 +1,5 @@
 from crewai import Agent
+from tools import yt_tool
 
 ### Create a senior youtube video content researcher
 youtube_video_researcher = Agent(
@@ -24,6 +25,6 @@ blog_writer = Agent(
         "engaging narratives that captivate and educate, bringing new"
         "discoveries to light in an accessible manner."
     ),
-    tools=[],
+    tools=[yt_tool],
     allow_delegation=False
 )
