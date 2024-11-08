@@ -3,7 +3,7 @@ from tools import yt_tool
 from agents import youtube_video_researcher, blog_writer
 
 ### Content research task
-research_tasl = Task(
+research_task = Task(
     description=(
         "Identify the video on the topic {topic}"
         "Get detailed information about the video from the Youtube channel"
@@ -19,7 +19,7 @@ writing_task = Task(
         "Get the info from the Youtube channel video on the topic {topic}."
     ),
     expected_output="Summarize the info from Youtube channel video on the topic {topic} and create content for the blog",
-    tools=[yt_tool],
+    tools=[],
     agent=blog_writer,
     async_execution=False,
     output_file='new-blog.md'

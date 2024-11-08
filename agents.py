@@ -1,6 +1,9 @@
 from crewai import Agent
 from tools import yt_tool
 
+from dotenv import load_dotenv
+load_dotenv()
+
 ### Create a senior youtube video content researcher
 youtube_video_researcher = Agent(
     role='Blog content researcher from Youtube videos',
@@ -10,7 +13,7 @@ youtube_video_researcher = Agent(
     backstory=(
         "Expert in understanding videos in Data Science, Artificial Intelligence, Machine Learning and Generative AI and suggesting content for blog"
     ),
-    tools=[],
+    tools=[yt_tool],
     allow_delegation=True
 )
 
@@ -25,6 +28,6 @@ blog_writer = Agent(
         "engaging narratives that captivate and educate, bringing new"
         "discoveries to light in an accessible manner."
     ),
-    tools=[yt_tool],
+    tools=[],
     allow_delegation=False
 )
