@@ -14,7 +14,7 @@ youtube_video_researcher = Agent(
         "Expert in understanding videos in Data Science, Artificial Intelligence, Machine Learning and Generative AI and suggesting content for blog"
     ),
     tools=[yt_tool],
-    allow_delegation=True
+    allow_delegation=False
 )
 
 ### Create a senior blog writer
